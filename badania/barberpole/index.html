@@ -192,8 +192,8 @@
             <br>
             <div class="sekcjaKwestionariusza">
               <h2 style="text-align: justify">
-                    <div class="english">Please, describe the lowest note that you hear in terms of its pitch, timbre, dynamics, etc. Listen to the example again if necessary.</div>
-                    <div class="polski">Proszę, opisz najniższy dźwięk, który słyszysz, odnosząc się do jego barwy, wysokości, lokalizacji itp. W razie potrzeby posłuchaj przykładu ponownie.</div>
+                    <div class="english">Please, describe the lowest note that you hear in terms of its pitch, timbre, dynamics, etc.<br>Listen to the example multiple times if necessary. You are allowed to use a musical instrument as a pitch reference."</div>
+                    <div class="polski">Proszę, opisz najniższy dźwięk, który słyszysz, odnosząc się do jego barwy, wysokości, lokalizacji itp.<br>W razie potrzeby możesz posłuchać przykładu wielokrotnie oraz skorzystać z instrumentu muzycznego jako referencji wysokości dźwięku.</div>
               </h2>
               <textarea required name="opis_najnizszego_dzwieku" rows="16" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
             </div>
@@ -713,13 +713,12 @@
     document.getElementById('audiobutton_barberpole_01').style.color = "#000000";
     document.getElementById('audiobutton_barberpole_01').style.backgroundColor = "#CCFFFF";
 
-	  
     play_counter += 1;
-    setTimeout(() => {
+      setTimeout(() => {
         document.getElementById('audiobutton_barberpole_01').style.color = "#ffffff";
         document.getElementById('audiobutton_barberpole_01').style.backgroundColor = "#009999";
         play_counter -= 1;
-    }, audio_example_duration*1000.0+1);
+      }, audio_example_duration*1000.0+1);
   }
 
 
