@@ -713,11 +713,13 @@
     document.getElementById('audiobutton_barberpole_01').style.color = "#000000";
     document.getElementById('audiobutton_barberpole_01').style.backgroundColor = "#CCFFFF";
 
-      setTimeout(() => {
+	  
+    play_counter += 1;
+    setTimeout(() => {
         document.getElementById('audiobutton_barberpole_01').style.color = "#ffffff";
         document.getElementById('audiobutton_barberpole_01').style.backgroundColor = "#009999";
         play_counter -= 1;
-      }, audio_example_duration*1000.0+1);
+    }, audio_example_duration*1000.0+1);
   }
 
 
