@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<!-- v2024_06_17 Jan Machalski-->
+<html lang="pl-PL">
+<head>
+	
+
+	<meta charset="utf-8">
+	<title>test_1</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="This site is under development" />
+</head>
+
+
+
+
+  <div class="language_selector">
+      <select id="langselector" onchange="loadlang()">
+        <option value="English">English</option>
+        <option value="polski">polski</option>
+      </select>
+  </div>
+
+<body>
+
+	<header>
+      <h1><a href="../index.html">[ home ]</a></h1>
+      <div class="english">
+        <h1 class="naglowek">EXPERIMENT #1</h1>
+      </div>
+      <div class="polski">
+        <h1 class="naglowek">BADANIE #1</h1>
+      </div>
+	</header>
+	  <main>
+	    <section></section>
+	    <section></section>
+	    <section></section>
+      <br>
+
+      <br>
+          <div class="english"></div>
+          <div class="polski"></div>
+
+          <form action="https://api.web3forms.com/submit" method="post" id="npsform" target="_blank">
+            <input type="hidden" name="access_key" value="f21cdf7e-cbb0-48cb-a08b-d5a81c866c00">
+            <input type="hidden" name="subject" value="badanie1_barberpole_differential_tone" />
+            <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+            <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+
+
+
+
+
+
+           <div class="sekcjaKwestionariusza">
+                <h2>
+                    <div class="english">Are you a musician or a music student?</div>
+                    <div class="polski">Czy jesteś muzykiem lub uczniem szkoły muzycznej?</div>
+                </h2>
+                  <div>
+                    <fieldset>
+                    <input required type="radio" id="badanie_czyjestesmuzykiem_odpowiedz_tak" name="czy_jestes_muzykiem" value="Tak"/>
+                      <label for="badanie_czyjestesmuzykiem_odpowiedz_tak" class="radiolabel">
+                          <div class="english">Yes</div>
+                          <div class="polski">Tak</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_czyjestesmuzykiem_odpowiedz_nie" name="czy_jestes_muzykiem" value="Nie"/>
+                      <label for="badanie_czyjestesmuzykiem_odpowiedz_nie" class="radiolabel">
+                          <div class="english">No</div>
+                          <div class="polski">Nie</div>
+                      </label>
+                    </fieldset>
+                  </div>
+            </div>
+            <br>
+            <br>
+
+
+           <div class="sekcjaKwestionariusza">
+                <h2>
+                    <div class="english">Do you have perfect pitch?</div>
+                    <div class="polski">Czy masz słuch absolutny?</div>
+                </h2>
+                  <div>
+                    <fieldset>
+                    <input required type="radio" id="badanie_czymaszsluchabsolutny_odpowiedz_tak" name="czy_masz_sluch_absolutny" value="Tak"/>
+                      <label for="badanie_czymaszsluchabsolutny_odpowiedz_tak" class="radiolabel">
+                          <div class="english">Yes</div>
+                          <div class="polski">Tak</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_czymaszsluchabsolutny_nie" name="czy_masz_sluch_absolutny" value="Nie"/>
+                      <label for="badanie_czymaszsluchabsolutny_nie" class="radiolabel">
+                          <div class="english">No</div>
+                          <div class="polski">Nie</div>
+                      </label>
+                    </fieldset>
+                  </div>
+            </div>
+            <br>
+            <br>
+
+           <div class="sekcjaKwestionariusza">
+                <h2>
+                    <div class="english">What age range do you fall into?</div>
+                    <div class="polski">Do której grupy wiekowej należysz?</div>
+                </h2>
+                  <div>
+                    <fieldset>
+                    <input required type="radio" id="badanie_kategoria_wiekowa_odpowiedz1" name="wiek" value="<12"/>
+                      <label for="badanie_kategoria_wiekowa_odpowiedz1" class="radiolabel">
+                          <div><11</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_kategoria_wiekowa_odpowiedz2" name="wiek" value="12-18"/>
+                      <label for="badanie_kategoria_wiekowa_odpowiedz2" class="radiolabel">
+                          <div>11-17</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_kategoria_wiekowa_odpowiedz3" name="wiek" value="18-25"/>
+                      <label for="badanie_kategoria_wiekowa_odpowiedz3" class="radiolabel">
+                          <div>18-25</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_kategoria_wiekowa_odpowiedz4" name="wiek" value="25-60"/>
+                      <label for="badanie_kategoria_wiekowa_odpowiedz4" class="radiolabel">
+                          <div>26-60</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_kategoria_wiekowa_odpowiedz5" name="wiek" value="2"/>
+                      <label for="badanie_kategoria_wiekowa_odpowiedz5" class="radiolabel">
+                          <div>>60</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+
+
+
+
+
+
+            <div class="sekcjaKwestionariusza">
+              <div>
+                <h2>
+                    <div class="english">Listen to the following example:</div>
+                    <div class="polski">Posłuchaj następującego przykładu:</div>
+                </h2>
+                <div>
+                  <div class="prawa_kolumna_przykladow" class="slidecontainer">
+                   <label for="volume">
+                      <div class="english">volume:</div>
+                      <div class="polski">głośność:</div>
+                   </label><br>
+                   <input type="range" min="0" max="100" value="50" class="slider" id="volume_slider" name="volume">
+                  </div>
+                  <div class="lewa_kolumna_przykladow">
+                      <button class="audiobutton" style="width:100%" id="audiobutton_barberpole_01" type="button" onclick="gui_play_button_barberpole_example_01()">
+                          <div class="english">𝄞 PLAY</div>
+                          <div class="polski">𝄞 START</div>
+                      </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <br>
+            <div class="sekcjaKwestionariusza">
+              <h2 style="text-align: justify">
+                    <div class="english">Please, describe the lowest note that you hear in terms of its pitch, timbre, dynamics, etc. Listen to the example again if necessary.</div>
+                    <div class="polski">Proszę, opisz najniższy dźwięk, który słyszysz, odnosząc się do jego barwy, wysokości, lokalizacji itp. W razie potrzeby posłuchaj przykładu ponownie.</div>
+              </h2>
+              <textarea required name="opis_najnizszego_dzwieku" rows="16" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
+            </div>
+            <br>
+            <br>
+            <br>
+
+
+
+            <div class="sekcjaKwestionariusza">
+              <h2 style="text-align: justify"> 
+                  <div class="english">Briefly describe your listening conditions (headphone model, etc.):</div>
+                  <div class="polski">Opisz krótko warunki odsłuchowe (model słuchawek itp.): </div>
+              </h2>
+              <textarea required name="warunki_odsluchowe" rows="3" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
+            </div>
+            <br>
+            <br>
+
+            <div class="sekcjaKwestionariusza">
+              <h2> 
+                  <div class="english">Additional notes:</div>
+                  <div class="polski">Dodatkowe uwagi:</div>
+              </h2>
+              <textarea name="dodatkowe_uwagi" rows="3" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
+            </div>
+            <br>
+            <br>
+
+
+
+
+            <div class="sekcjaKwestionariusza">
+                <legend></legend>
+
+               <h2>
+                    <div class="english">Consent for personal data processing</div>
+                    <div class="polski">Zgoda na przetwarzanie danych osobowych</div>
+                </h2>
+                <p> 
+                    <div class="english">By submitting this form, I hereby consent to the processing of the personal data that I have provided for the purpose of conducting the study and disseminating the results.</div>
+                    <div class="polski">Poprzez złożenie formularza niniejszym wyrażam zgodę na przetwarzanie podanych przeze mnie danych osobowych w celu przeprowadzenia badania i upowszechnienia jego wyników.</div>
+                </p>
+                <br>
+
+
+                <div class="mb-3" style="margin-top:10px">
+                    <button type="submit" class="btn btn-danielle submitbutton" style="width: 100%">
+                      <div class="english">Submit the form</div>
+                      <div class="polski">Złóż formularz</div>
+                    </button>
+                </div>
+
+              <div id="form-result"></div>
+
+            </div>
+          </form>
+
+
+
+	  </main>
+	  <footer>
+	  J.F.M.
+	  </footer>
+</body>
+
+
+<script>
+  function loadlang(){
+    if (document.getElementById("langselector").value == "polski"){
+        document.querySelectorAll(".english").forEach(elem => elem.style.display = 'none');
+        document.querySelectorAll(".polski").forEach(elem => elem.style.display = 'block');
+    } else {
+        document.querySelectorAll(".english").forEach(elem => elem.style.display = 'block');
+        document.querySelectorAll(".polski").forEach(elem => elem.style.display = 'none');
+      }
+    }
+    loadlang();
+</script>
+
+<script>
+  window.addEventListener('beforeunload', function (e) {
+  // Cancel the event
+  e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
+  // Chrome requires returnValue to be set
+  e.returnValue = '';
+});
+</script>
+
+<style>
+  * {
+    font-family: 'Courier New', monospace;
+    box-sizing: border-box;
+  }
+
+  body, a:link, a:visited {
+    color: linen;
+  }
+
+  body {
+    font-size: 16px:;
+    /* background-color: hsla(211, 40%, 15%, 1.0);  MidnightBlue; */
+    background-color: #2C3539; /* MidnightBlue; */
+    line-height: 2;
+    text-align: justify;
+    margin-top: 5%;
+    margin-left: 8%;
+    margin-right: 16%;
+    margin-bottom: 240px;
+  }
+
+    .column {
+      width: 100%;
+    }
+
+  @media screen and (min-width:600px) {
+    .column{
+        display: flex;
+        width: 48%;
+      /* padding:1rem; */
+      }
+    .row {
+       display: flex;
+    }
+  }
+
+
+  .audiobutton {
+    padding: 2px 1rem 2px 1rem;
+    font-size: 16px;
+    border-radius: 2px;
+    background-color: #009999;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    margin: 2px 2px 4px 4px;
+    cursor: pointer;
+  }
+  .audiobutton:hover {
+      color: #000000;
+      background-color: #CCFFFF;
+    }
+  @media screen and (min-width:600px) {
+    .audiobutton{
+        padding: 15px 32px;
+        font-size: 22px;
+        border-radius: 3px;
+      }
+  }
+  
+  
+
+  .submitbutton {
+    padding: 2px 1rem 2px 1rem;
+    font-size: 16px;
+    border-radius: 2px;
+    background-color: #009999;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    margin: 2px 2px 4px 4px;
+    cursor: pointer;
+  }
+  .submitbutton:hover {
+      color: #000000;
+      background-color: #CCFFFF;
+    }
+  @media screen and (min-width:600px) {
+    .submitbutton{
+        padding: 15px 32px;
+        font-size: 22px;
+        border-radius: 3px;
+      }
+  }
+
+  a:hover, .klikalne:hover {
+      color: #FFFEFA;
+    }
+
+    body {
+      animation: fadein 0.3s;
+          -moz-animation: fadein 0.3s; /* Firefox */
+          -webkit-animation: fadein 0.3s; /* Safari and Chrome */
+          -o-animation: fadein 0.3s; /* Opera */
+    }
+
+    @keyframes fadein {
+          from {
+              opacity:0;
+          }
+          to {
+              opacity:1;
+          }
+        }
+        @-moz-keyframes fadein { /* Firefox */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-webkit-keyframes fadein { /* Safari and Chrome */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-o-keyframes fadein { /* Opera */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+  h1, body, p, code, footer {
+    font-family: 'Courier New', monospace;
+    font-weight: normal;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 0%; 
+    font-weight: normal;
+  }
+
+  h2 {
+    text-align: left;
+    margin-top: 0px;
+    margin-left: 0%; 
+    font-weight: normal;
+    font-size: 20px;
+  }
+
+  .naglowek {
+    text-align: center;
+    margin-top: 61px;
+    margin-left: 0%; 
+    font-weight: normal;
+  }
+
+  .language_selector {
+      /* float: right; */
+      text-align: right;
+      position: static;
+      margin-top: 0%;
+
+      margin-right: 0px;
+  }
+
+  p {
+  }
+
+  footer {
+    text-align: right;
+    font-size: 12px;
+    margin-right: 0px;
+  }
+  
+  code {
+    font-size: 16px;
+    margin-top: 32px;
+    margin-left: 42px;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    font-size: 18px;
+  }
+
+  nav {
+    text-align: center;
+    list-style-type: none;
+    font-size: 24px;
+  }
+  
+  a {
+    text-decoration: none;
+    }
+
+    
+
+  table {
+    border:solid SlateGrey 1px;
+      border-radius: 8px;
+      width: 100%;
+    }
+  th, td {
+    padding: 24px;
+    text-align: left;
+    }
+
+  #prawydolnyrog {
+      position: fixed;
+      right: 48px;
+      bottom: 12px;
+      text-align: right;
+      font-size: 24px;
+    }
+
+  form {
+    /* max-width: 500px; */
+    margin: 150px auto;
+  }
+
+  
+  fieldset {
+    border: 0;
+  }
+  
+
+  input,
+  textarea{
+    width: 100%;
+  }
+
+
+
+  input[type="radio"]{
+      width: auto;
+      display: block;
+      position: absolute;
+      padding-left: 0px;
+      vertical-align: middle;
+      margin-top: 8px;
+      cursor: pointer;
+  }
+  .radiolabel {
+      display: block;
+      position: relative;
+      padding-left: 36px;
+      cursor: pointer;
+  }
+  input[type="radio"]:checked+label{
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;
+  } 
+
+  input[type="checkbox"]{
+      width: auto;
+      display: inline;
+      cursor: pointer;
+  }
+
+  .sekcjaKwestionariusza {
+    float: center;
+    width: 100%;
+    border-left-style: dotted;
+    border-color: linen;
+    padding-left:1rem;
+    padding-bottom: 2rem;
+    overflow: auto; 
+    display: table;
+  }
+
+  legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+  }
+
+  .lewa_kolumna_przykladow {
+    position:relative;
+    float: left;
+    width: 48%;
+    text-align: right;
+    padding-left: 2px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-top: 2px;
+  }
+  .prawa_kolumna_przykladow {
+    position:relative;
+    float: right;
+    width: 48%;
+    text-align: left;
+    padding-left: 12px;
+    padding-right: 2px;
+    padding-bottom: 12px;
+    padding-top: 2px;
+  }
+</style>
+
+
+
+
+<script>
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  const audioCtx = new AudioContext();
+
+
+
+
+  let audio_is_running = 0;
+  let last_played_audio_example = 0;
+  let play_counter = 0;
+
+  let barberpole_duration = 6.0;
+
+
+ 
+  const master_gain = audioCtx.createGain();
+    master_gain.connect(audioCtx.destination);
+
+ 
+
+  function init_oscillators(){
+    /*
+    const oscillator = audioCtx.createOscillator();
+          osc_source_array[0] = oscillator;
+          oscillator.type = "sine";
+          oscillator.frequency = 1000.0;
+          oscillator.connect(barberpole_gain.gain);
+    
+    for (let i = 0; i < num_of_oscillators; i++) {
+        const oscillator = audioCtx.createOscillator();
+        const osc_source_array[i] = oscillator;
+
+          oscillator.type = "sine";
+          oscillator.frequency = 1000.0;
+        const osc_gain_array[i] = audioCtx.createGain();
+          osc_gain_array[i].gain.value = 0.0;
+          osc_gain_array[i].connect(barberpole_gain.gain);
+          oscillator.connect(osc_gain_array[i].gain);
+        const osc_freq_array[i] = audioCtx.createConstantSource();
+        const osc_freq_ramp_array[i] = audioCtx.createConstantSource();
+          osc_freq_ramp_array[i].connect(osc_freq_array[i].frequency);
+          osc_base_frequency.connect(osc_freq_array[i].frequency);
+        osc_freq_array[i].frequency.connect(oscillator.frequency);
+        osc_source_array[i].start();
+    }*/
+  }
+
+  function play_audio_example(num_of_example_to_play){
+
+    let fade_in_duration = 0.1;
+    let fade_out_duration = 0.1;
+    if (last_played_audio_example != 0) {
+      gain_node_array[last_played_audio_example].gain.setValueCurveAtTime([0.1, 0.0], audioCtx.currentTime, fade_out_duration);
+    }
+    if (num_of_example_to_play == last_played_audio_example){
+      last_played_audio_example = 0;
+    } else {
+      gain_node_array[num_of_example_to_play].gain.setValueCurveAtTime([0.0, 0.1], audioCtx.currentTime, fade_in_duration);
+      last_played_audio_example = num_of_example_to_play;
+    }
+
+  }
+
+  function reset_oscillators(){
+    if (audio_is_running == 0){
+      init_oscillators();
+      audio_is_running = 1
+    }
+    /*
+    barberpole_gain.gain.cancelScheduledValues(audioCtx.currentTime);
+    for (let i = 0; i < num_of_oscillators; i++) {
+      osc_gain_array[i].gain.cancelScheduledValues(audioCtx.currentTime);
+      osc_gain_array[i].gain.setValueAtTime(0.0, audioCtx.currentTime);
+      osc_freq_ramp_array[i].frequency.cancelScheduledValues(audioCtx.currentTime);
+    }
+    */
+  } 
+
+
+
+  function play_linear_sine_sweep(start_frequency, end_frequency, start_time, playback_duration, fadein_duration, fadeout_duration, ampitude_gain){
+    const linear_sine_sweep_gain = audioCtx.createGain();
+      linear_sine_sweep_gain.gain.setValueAtTime(0.0, audioCtx.currentTime);
+      linear_sine_sweep_gain.connect(master_gain);
+
+     const linear_sine_sweep_scillator = audioCtx.createOscillator();
+      linear_sine_sweep_scillator.type = "sine";
+      linear_sine_sweep_scillator.frequency.setValueAtTime(start_frequency, audioCtx.currentTime);
+      linear_sine_sweep_scillator.connect(linear_sine_sweep_gain);
+      linear_sine_sweep_scillator.start();
+
+      linear_sine_sweep_scillator.frequency.setValueAtTime(start_frequency, start_time);
+      linear_sine_sweep_scillator.frequency.linearRampToValueAtTime(end_frequency,  start_time + playback_duration);
+      linear_sine_sweep_gain.gain.setValueCurveAtTime([0.0, ampitude_gain], start_time, fadein_duration);
+      linear_sine_sweep_gain.gain.setValueCurveAtTime([ampitude_gain, 0.0], start_time + playback_duration - fadeout_duration, fadeout_duration);
+
+  }
+
+  function play_barberpole_example_1(){
+    let odstepy_czestotliwosci = [110.0,110.0,110.0,110.0];
+    let number_of_oscillators = odstepy_czestotliwosci.length;
+    let lowest_frequency = 440.0 * 4;
+    let delta_frequency = 440.0;
+    let start_time = audioCtx.currentTime + 0.2;
+    let audio_example_duration = 4.0;
+    let fadein_duration = 0.1;
+    let fadeout_duration = 0.3;
+    let ampitude_gain = 0.5/Math.sqrt(number_of_oscillators);
+
+    let start_frequency = lowest_frequency;
+    let playback_duration = audio_example_duration;
+    for (let i = 0; i < number_of_oscillators; i++) {
+      play_linear_sine_sweep(start_frequency, start_frequency+delta_frequency, start_time, playback_duration, fadein_duration, fadeout_duration, ampitude_gain);
+      start_frequency += odstepy_czestotliwosci[i];
+    }
+
+
+    document.getElementById('audiobutton_barberpole_01').style.color = "#000000";
+    document.getElementById('audiobutton_barberpole_01').style.backgroundColor = "#CCFFFF";
+
+      setTimeout(() => {
+        document.getElementById('audiobutton_barberpole_01').style.color = "#ffffff";
+        document.getElementById('audiobutton_barberpole_01').style.backgroundColor = "#009999";
+        play_counter -= 1;
+      }, audio_example_duration*1000.0+1);
+  }
+
+
+
+  function start_barberpole_legacy(frequency_structure){
+    play_counter += 1;
+
+    const barberpole_gain = audioCtx.createGain();
+      barberpole_gain.connect(master_gain);
+
+    let num_of_oscillators = arguments.length;
+
+    const osc_gain_array = [];
+    const osc_source_array = [];
+    const osc_freq_array = [];
+    const osc_freq_ramp_array = [];
+    const osc_base_frequency = audioCtx.createConstantSource();
+    let calc_base_frequency = 0.0;
+    for (let i = 0; i < arguments.length; i++) {
+      calc_base_frequency += arguments[i];
+    }
+    osc_base_frequency.offset.value = calc_base_frequency;
+    osc_base_frequency.start();
+
+    let barberpole_voice_offset = 0;
+
+    for (let i = 0; i < arguments.length; i++) {
+      const oscillator = audioCtx.createOscillator();
+      osc_source_array[i] = oscillator;
+      osc_base_frequency.connect(oscillator.frequency);
+      oscillator.start();
+      var gainNode = audioCtx.createGain();
+      osc_gain_array[i] = gainNode;
+      oscillator.connect(gainNode);
+      gainNode.connect(barberpole_gain);
+      oscillator.type = "sine";
+      gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+
+      let barberpole_voice_duration = barberpole_duration - (barberpole_duration * barberpole_voice_offset/calc_base_frequency);
+      barberpole_voice_fade_in = barberpole_duration / 16;
+      barberpole_voice_fade_out = barberpole_duration / 16;
+
+      
+      oscillator.frequency.setValueAtTime(calc_base_frequency+barberpole_voice_offset, audioCtx.currentTime);
+      oscillator.frequency.linearRampToValueAtTime(calc_base_frequency+calc_base_frequency,  audioCtx.currentTime + barberpole_voice_duration);
+      gainNode.gain.setValueCurveAtTime([0.0, 0.5], audioCtx.currentTime, barberpole_voice_fade_in);
+      gainNode.gain.setValueCurveAtTime([0.5, 0.0], audioCtx.currentTime + barberpole_voice_duration - barberpole_voice_fade_out, barberpole_voice_fade_out);
+
+      if (barberpole_voice_duration < barberpole_duration){
+          oscillator.frequency.setValueAtTime(calc_base_frequency, audioCtx.currentTime + barberpole_voice_duration);
+          oscillator.frequency.linearRampToValueAtTime(calc_base_frequency+barberpole_voice_offset,  audioCtx.currentTime + barberpole_duration);
+
+          gainNode.gain.setValueCurveAtTime([0.0, 0.00, 0.01, 0.02, 0.5], audioCtx.currentTime + barberpole_voice_duration, barberpole_voice_fade_in);
+          gainNode.gain.setValueCurveAtTime([0.5, 0.02, 0.01, 0.00, 0.0], audioCtx.currentTime + barberpole_duration - barberpole_voice_fade_out, barberpole_voice_fade_out);
+      }
+      barberpole_voice_offset += arguments[i];
+    }
+
+
+      barberpole_gain.gain.value = 0.5;
+      master_gain.gain.value = 0.5;
+
+      setTimeout(() => {
+        play_counter -= 1;
+      }, barberpole_duration*1000.0);
+  }
+
+
+
+  function gui_play_button_barberpole_example_01() {
+      //reset_oscillators();
+      if (play_counter > 0){
+      } else {
+        play_barberpole_example_1();
+    }
+  }
+
+  var slider = document.getElementById("volume_slider");
+  master_gain.gain.setValueAtTime(slider.value/100.0, audioCtx.currentTime);
+  slider.oninput = function() {
+    master_gain.gain.cancelScheduledValues(0);
+    master_gain.gain.setValueCurveAtTime([master_gain.gain.value, slider.value/100.0], audioCtx.currentTime, 0.3);
+  }
+
+</script>
+

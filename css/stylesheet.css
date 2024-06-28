@@ -1,0 +1,218 @@
+<style>
+	* {
+	  font-family: 'Courier New', monospace;
+	  box-sizing: border-box;
+	}
+
+	body, a:link, a:visited {
+	  color: linen;
+	}
+
+	body {
+	  font-size: 16px:;
+	  /* background-color: hsla(211, 40%, 15%, 1.0);  MidnightBlue; */
+	  background-color: #2C3539; /* MidnightBlue; */
+	  line-height: 2;
+	  text-align: justify;
+	  margin-top: 5%;
+	  margin-left: 8%;
+	  margin-right: 16%;
+	  margin-bottom: 240px;
+	}
+
+	  .column {
+	    width: 100%;
+	  }
+
+	@media screen and (min-width:600px) {
+		.column{
+		   	display: flex;
+		    width: 48%;
+	 		/* padding:1rem; */
+			}
+		.row {
+		   display: flex;
+		}
+	}
+
+
+	.button {
+	  background-color: #009999;
+	  border: none;
+	  color: white;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 22px;
+	  border-radius: 3px;
+	  font-family: inherit;
+	  margin: 2px 2px 4px 4px;
+	}
+	.button:hover {
+		  color: #000000;
+		  background-color: #CCFFFF;
+		}
+	
+	
+	
+
+	a:hover, .klikalne:hover {
+		  color: #FFFEFA;
+		}
+
+		body {
+			animation: fadein 0.3s;
+  				-moz-animation: fadein 0.3s; /* Firefox */
+  				-webkit-animation: fadein 0.3s; /* Safari and Chrome */
+   				-o-animation: fadein 0.3s; /* Opera */
+		}
+
+		@keyframes fadein {
+			    from {
+			        opacity:0;
+			    }
+			    to {
+			        opacity:1;
+			    }
+				}
+				@-moz-keyframes fadein { /* Firefox */
+				    from {
+				        opacity:0;
+				    }
+				    to {
+				        opacity:1;
+				    }
+				}
+				@-webkit-keyframes fadein { /* Safari and Chrome */
+				    from {
+				        opacity:0;
+				    }
+				    to {
+				        opacity:1;
+				    }
+				}
+				@-o-keyframes fadein { /* Opera */
+				    from {
+				        opacity:0;
+				    }
+				    to {
+				        opacity: 1;
+				    }
+				}
+
+	h1, body, p, code, footer {
+	font-family: 'Courier New', monospace;
+	font-weight: normal;
+	}
+
+	h1 {
+	  text-align: center;
+	  margin-top: 0px;
+	  margin-left: 0%; 
+	  font-weight: normal;
+	}
+
+	h2 {
+	  text-align: left;
+	  margin-top: 0px;
+	  margin-left: 0%; 
+	  font-weight: normal;
+	}
+
+	.naglowek {
+	  text-align: center;
+	  margin-top: 61px;
+	  margin-left: 0%; 
+	  font-weight: normal;
+	}
+
+	.language_selector {
+  		/* float: right; */
+  		text-align: right;
+  		position: static;
+    	margin-top: 0%;
+
+    	margin-right: 0px;
+	}
+
+	p {
+	}
+
+	footer {
+	  text-align: right;
+	  font-size: 12px;
+	  margin-right: 0px;
+	}
+	
+	code {
+	  font-size: 16px;
+	  margin-top: 32px;
+	  margin-left: 42px;
+	  text-align: center;
+	}
+
+	ul {
+	  list-style-type: none;
+	  font-size: 18px;
+	}
+
+	nav {
+	  text-align: center;
+	  list-style-type: none;
+	  font-size: 24px;
+	}
+	
+	a {
+		text-decoration: none;
+		}
+
+		
+
+	table {
+		border:solid SlateGrey 1px;
+  		border-radius: 8px;
+  		width: 100%;
+		}
+	th, td {
+	 	padding: 24px;
+		text-align: left;
+		}
+
+	#prawydolnyrog {
+			position: fixed;
+			right: 48px;
+			bottom: 12px;
+			text-align: right;
+			font-size: 24px;
+		}
+
+	form {
+	  /* max-width: 500px; */
+	  margin: 150px auto;
+	}
+
+	/*
+	fieldset {
+	  padding: 30px;
+	}
+	*/
+
+	input,
+	textarea{
+	  width: 100%;
+	}
+
+
+
+	input[type="radio"]{
+	    width: auto;
+	    display: inline;
+	}
+
+	.sekcjaKwestionariusza {
+  	  border-left-style: dotted;
+	  border-color: linen;
+	  padding-left:1rem;
+	}
+</style>

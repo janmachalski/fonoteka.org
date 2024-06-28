@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<!-- v2024_06_17 Jan Machalski-->
+<html lang="pl-PL">
+<head>
+	
+
+	<meta charset="utf-8">
+	<title>test_2</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="This site is under development" />
+</head>
+
+
+
+
+  <div class="language_selector">
+      <select id="langselector" onchange="loadlang()">
+        <option value="English">English</option>
+        <option value="polski">polski</option>
+      </select>
+  </div>
+
+<body>
+
+  <header>
+      <h1><a href="../index.html">[ home ]</a></h1>
+      <div class="english">
+        <h1 class="naglowek">EXPERIMENT #2</h1>
+      </div>
+      <div class="polski">
+        <h1 class="naglowek">BADANIE #2</h1>
+      </div>
+  </header>
+	  <main>
+	    <section></section>
+	    <section></section>
+	    <section></section>
+      <br>
+
+      <br>
+
+          <form action="https://api.web3forms.com/submit" method="post" id="npsform" target="_blank">
+            <input type="hidden" name="access_key" value="f21cdf7e-cbb0-48cb-a08b-d5a81c866c00">
+            <input type="hidden" name="subject" value="Ocena_barwy_wybranych_klasterow" />
+            <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+            <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+
+           <div class="sekcjaKwestionariusza">
+                <h2>
+                    <div class="english">Are you a musician or a music student?</div>
+                    <div class="polski">Czy jesteś muzykiem lub uczniem szkoły muzycznej?</div>
+                </h2>
+                  <div>
+                    <fieldset>
+                    <input required type="radio" id="badanie_czyjestesmuzykiem_odpowiedz_tak" name="czy_jestes_muzykiem" value="Tak"/>
+                      <label for="badanie_czyjestesmuzykiem_odpowiedz_tak" class="radiolabel">
+                          <div class="english">Yes</div>
+                          <div class="polski">Tak</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_czyjestesmuzykiem_odpowiedz_nie" name="czy_jestes_muzykiem" value="Nie"/>
+                      <label for="badanie_czyjestesmuzykiem_odpowiedz_nie" class="radiolabel">
+                          <div class="english">No</div>
+                          <div class="polski">Nie</div>
+                      </label>
+                    </fieldset>
+                  </div>
+            </div>
+            <br>
+            <br>
+
+
+           <div class="sekcjaKwestionariusza">
+                <h2>
+                    <div class="english">Do you have perfect pitch?</div>
+                    <div class="polski">Czy masz słuch absolutny?</div>
+                </h2>
+                  <div>
+                    <fieldset>
+                    <input required type="radio" id="badanie_czymaszsluchabsolutny_odpowiedz_tak" name="czy_masz_sluch_absolutny" value="Tak"/>
+                      <label for="badanie_czymaszsluchabsolutny_odpowiedz_tak" class="radiolabel">
+                          <div class="english">Yes</div>
+                          <div class="polski">Tak</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_czymaszsluchabsolutny_nie" name="czy_masz_sluch_absolutny" value="Nie"/>
+                      <label for="badanie_czymaszsluchabsolutny_nie" class="radiolabel">
+                          <div class="english">No</div>
+                          <div class="polski">Nie</div>
+                      </label>
+                    </fieldset>
+                  </div>
+            </div>
+            <br>
+            <br>
+
+           <div class="sekcjaKwestionariusza">
+                <h2>
+                    <div class="english">What age range do you fall into?</div>
+                    <div class="polski">Do której grupy wiekowej należysz?</div>
+                </h2>
+                  <div>
+                    <fieldset>
+                    <input required type="radio" id="badanie_kategoria_wiekowa_odpowiedz1" name="wiek" value="<12"/>
+                      <label for="badanie_kategoria_wiekowa_odpowiedz1" class="radiolabel">
+                          <div><11</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_kategoria_wiekowa_odpowiedz2" name="wiek" value="12-18"/>
+                      <label for="badanie_kategoria_wiekowa_odpowiedz2" class="radiolabel">
+                          <div>11-17</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_kategoria_wiekowa_odpowiedz3" name="wiek" value="18-25"/>
+                      <label for="badanie_kategoria_wiekowa_odpowiedz3" class="radiolabel">
+                          <div>18-25</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_kategoria_wiekowa_odpowiedz4" name="wiek" value="25-60"/>
+                      <label for="badanie_kategoria_wiekowa_odpowiedz4" class="radiolabel">
+                          <div>26-60</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_kategoria_wiekowa_odpowiedz5" name="wiek" value="2"/>
+                      <label for="badanie_kategoria_wiekowa_odpowiedz5" class="radiolabel">
+                          <div>>60</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+
+
+
+            <div class="sekcjaKwestionariusza">
+              <div>
+                <h2>
+                    <div class="english">Please, compare the following audio examples::</div>
+                    <div class="polski">Proszę, porównaj poniższe przykłady dźwiękowe:</div>
+                </h2>
+                <div>
+                  <div class="lewa_kolumna_przykladow">
+                      <button class="audiobutton" id="900001" type="button" onclick="gui_play_button_example_1A_cb()">
+                          <div class="english">𝄞 example 1A</div>
+                          <div class="polski">𝄞 przykład 1A</div>
+                      </button>
+                  </div>
+                  <div class="prawa_kolumna_przykladow">
+                      <button class="audiobutton" id="900002" type="button" onclick="gui_play_button_example_1B_cb()">
+                          <div class="english">𝄞 example 1B</div>
+                          <div class="polski">𝄞 przykład 1B </div>
+                      </button>
+                  </div>
+                  <div class="lewa_kolumna_przykladow">
+                      <button class="audiobutton" id="900003" type="button" onclick="gui_play_button_example_2A_cb()">
+                          <div class="english">𝄞 example 2A</div>
+                          <div class="polski">𝄞 przykład 2A</div>
+                      </button>
+                  </div>
+                  <div class="prawa_kolumna_przykladow">
+                      <button class="audiobutton" id="900004" type="button" onclick="gui_play_button_example_2B_cb()">
+                          <div class="english">𝄞 example 2B</div>
+                          <div class="polski">𝄞 przykład 2B </div>
+                      </button>
+                  </div>
+                  <div class="lewa_kolumna_przykladow">
+                      <button class="audiobutton" id="900005" type="button" onclick="gui_play_button_example_3A_cb()">
+                          <div class="english">𝄞 example 3A</div>
+                          <div class="polski">𝄞 przykład 3A</div>
+                      </button>
+                  </div>
+                  <div class="prawa_kolumna_przykladow">
+                      <button class="audiobutton" id="900006" type="button" onclick="gui_play_button_example_3B_cb()">
+                          <div class="english">𝄞 example 3B</div>
+                          <div class="polski">𝄞 przykład 3B </div>
+                      </button>
+                  </div>
+                </div>
+                <div class="slidecontainer">
+                   <label for="volume">
+                      <div class="english">volume:</div>
+                      <div class="polski">głośność:</div>
+                    </label><br>
+                   <input type="range" min="0" max="100" value="50" class="slider" id="volume_slider" name="volume">
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <div class="sekcjaKwestionariusza">
+              <h2 style="text-align: justify">
+                    <div class="english">Your task is to name as many features/categories/associations as possible that, for you, distinguish these audio examples from each other. These may include perceived qualities of sound (e.g. roughness), as well as non-musical associations, short descriptions, or emoticons. Listen to the examples again if necessary.<br>Post your answers in the area below:</div>
+                    <div class="polski">  Twoim zadaniem będzie nazwanie jak największej liczby cech/kategorii/skojarzeń, które w Twoim odczuciu odróżniały te przykłady dźwiękowe od siebie.<br> Mogą to być zarówno cechy jakościowe dźwięku (np. szorstkość), jak i skojarzenia pozamuzyczne, krótkie opisy, czy emotikony. W razie potrzeby posłuchaj przykładów ponownie.<br>Swoje odpowiedzi zamieść w obszarze poniżej:</div>
+              </h2>
+              <textarea required name="roznice_pomiedzy_przykladami" rows="16" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
+            </div>
+            <br>
+
+
+
+            <br>
+            <div class="sekcjaKwestionariusza">
+              <h2 style="text-align: justify"> 
+                  <div class="english">Briefly describe your listening conditions (headphone model, etc.):</div>
+                  <div class="polski">Opisz krótko warunki odsłuchowe (model słuchawek itp.): </div>
+              </h2>
+              <textarea required name="warunki_odsluchowe" rows="3" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
+            </div>
+            <br>
+            <div class="sekcjaKwestionariusza">
+              <h2> 
+                  <div class="english">Additional notes:</div>
+                  <div class="polski">Dodatkowe uwagi:</div>
+              </h2>
+              <textarea name="dodatkowe_uwagi" rows="3" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
+            </div>
+            <br>
+            <br>
+
+
+            <div class="sekcjaKwestionariusza">
+                <legend></legend>
+                
+                <h2>
+                    <div class="english">Consent for personal data processing</div>
+                    <div class="polski">Zgoda na przetwarzanie danych osobowych</div>
+                </h2>
+                <p> 
+                    <div class="english">By submitting this form, I hereby consent to the processing of the personal data that I have provided for the purpose of conducting the study and disseminating the results.</div>
+                    <div class="polski">Poprzez złożenie formularza niniejszym wyrażam zgodę na przetwarzanie podanych przeze mnie danych osobowych w celu przeprowadzenia badania i upowszechnienia jego wyników.</div>
+                </p>
+                <br>
+
+                <div class="mb-3" style="margin-top:10px">
+                    <button type="submit" class="btn btn-danielle submitbutton" style="width: 100%">
+                      <div class="english">Submit the form</div>
+                      <div class="polski">Złóż formularz</div>
+                    </button>
+                </div>
+
+              <div id="form-result"></div>
+
+            </div>
+          </form>
+
+
+
+	  </main>
+	  <footer>
+	  J.F.M.
+	  </footer>
+</body>
+
+
+<script>
+  function loadlang(){
+    if (document.getElementById("langselector").value == "polski"){
+        document.querySelectorAll(".english").forEach(elem => elem.style.display = 'none');
+        document.querySelectorAll(".polski").forEach(elem => elem.style.display = 'block');
+    } else {
+        document.querySelectorAll(".english").forEach(elem => elem.style.display = 'block');
+        document.querySelectorAll(".polski").forEach(elem => elem.style.display = 'none');
+      }
+    }
+    loadlang();
+</script>
+
+<script>
+  window.addEventListener('beforeunload', function (e) {
+  // Cancel the event
+  e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
+  // Chrome requires returnValue to be set
+  e.returnValue = '';
+});
+</script>
+
+<style>
+  * {
+    font-family: 'Courier New', monospace;
+    box-sizing: border-box;
+  }
+
+  body, a:link, a:visited {
+    color: linen;
+  }
+
+  body {
+    font-size: 16px:;
+    /* background-color: hsla(211, 40%, 15%, 1.0);  MidnightBlue; */
+    background-color: #2C3539; /* MidnightBlue; */
+    line-height: 2;
+    text-align: justify;
+    margin-top: 5%;
+    margin-left: 8%;
+    margin-right: 16%;
+    margin-bottom: 240px;
+  }
+
+    .column {
+      width: 100%;
+    }
+
+  @media screen and (min-width:600px) {
+    .column{
+        display: flex;
+        width: 48%;
+      /* padding:1rem; */
+      }
+    .row {
+       display: flex;
+    }
+  }
+
+
+  .audiobutton {
+    padding: 2px 1rem 2px 1rem;
+    font-size: 16px;
+    border-radius: 2px;
+    background-color: #009999;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    margin: 2px 2px 4px 4px;
+    cursor: pointer;
+  }
+  .audiobutton:hover {
+      color: #000000;
+      background-color: #CCFFFF;
+    }
+  @media screen and (min-width:600px) {
+    .audiobutton{
+        padding: 15px 32px;
+        font-size: 22px;
+        border-radius: 3px;
+      }
+  }
+  
+
+
+  .submitbutton {
+    padding: 2px 1rem 2px 1rem;
+    font-size: 16px;
+    border-radius: 2px;
+    background-color: #009999;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    margin: 2px 2px 4px 4px;
+    cursor: pointer;
+  }
+  .submitbutton:hover {
+      color: #000000;
+      background-color: #CCFFFF;
+    }
+  @media screen and (min-width:600px) {
+    .submitbutton{
+        padding: 15px 32px;
+        font-size: 22px;
+        border-radius: 3px;
+      }
+  }
+  
+  
+
+  a:hover, .klikalne:hover {
+      color: #FFFEFA;
+    }
+
+    body {
+      animation: fadein 0.3s;
+          -moz-animation: fadein 0.3s; /* Firefox */
+          -webkit-animation: fadein 0.3s; /* Safari and Chrome */
+          -o-animation: fadein 0.3s; /* Opera */
+    }
+
+    @keyframes fadein {
+          from {
+              opacity:0;
+          }
+          to {
+              opacity:1;
+          }
+        }
+        @-moz-keyframes fadein { /* Firefox */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-webkit-keyframes fadein { /* Safari and Chrome */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-o-keyframes fadein { /* Opera */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+  h1, body, p, code, footer {
+    font-family: 'Courier New', monospace;
+    font-weight: normal;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 0%; 
+    font-weight: normal;
+  }
+
+  h2 {
+    text-align: left;
+    margin-top: 0px;
+    margin-left: 0%; 
+    font-weight: normal;
+    font-size: 18px;
+  }
+
+  .naglowek {
+    text-align: center;
+    margin-top: 61px;
+    margin-left: 0%; 
+    font-weight: normal;
+  }
+
+  .language_selector {
+      /* float: right; */
+      text-align: right;
+      position: static;
+      margin-top: 0%;
+
+      margin-right: 0px;
+  }
+
+  p {
+  }
+
+  footer {
+    text-align: right;
+    font-size: 12px;
+    margin-right: 0px;
+  }
+  
+  code {
+    font-size: 16px;
+    margin-top: 32px;
+    margin-left: 42px;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    font-size: 18px;
+  }
+
+  nav {
+    text-align: center;
+    list-style-type: none;
+    font-size: 24px;
+  }
+  
+  a {
+    text-decoration: none;
+    }
+
+    
+
+  table {
+    border:solid SlateGrey 1px;
+      border-radius: 8px;
+      width: 100%;
+    }
+  th, td {
+    padding: 24px;
+    text-align: left;
+    }
+
+  #prawydolnyrog {
+      position: fixed;
+      right: 48px;
+      bottom: 12px;
+      text-align: right;
+      font-size: 24px;
+    }
+
+  form {
+    /* max-width: 500px; */
+    margin: 150px auto;
+  }
+
+  
+  fieldset {
+    border: 0;
+  }
+  
+
+  input,
+  textarea{
+    width: 100%;
+  }
+
+
+
+  input[type="radio"]{
+      width: auto;
+      display: block;
+      position: absolute;
+      padding-left: 0px;
+      vertical-align: middle;
+      margin-top: 8px;
+      cursor: pointer;
+  }
+  .radiolabel {
+      display: block;
+      position: relative;
+      padding-left: 36px;
+      cursor: pointer;
+  }
+  input[type="radio"]:checked+label{
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;
+  } 
+
+  input[type="checkbox"]{
+      width: auto;
+      display: inline;
+      cursor: pointer;
+  }
+
+  .sekcjaKwestionariusza {
+    float: center;
+    width: 100%;
+    border-left-style: dotted;
+    border-color: linen;
+    padding-left:1rem;
+    padding-bottom: 2rem;
+    overflow: auto; 
+    display: table;
+  }
+
+  legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+  }
+
+  .lewa_kolumna_przykladow {
+    position:relative;
+    float: left;
+    width: 48%;
+    text-align: right;
+    padding-left: 2px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-top: 2px;
+  }
+  .prawa_kolumna_przykladow {
+    position:relative;
+    float: right;
+    width: 48%;
+    text-align: left;
+    padding-left: 12px;
+    padding-right: 2px;
+    padding-bottom: 12px;
+    padding-top: 2px;
+  }
+</style>
+
+
+
+
+<script>
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  const audioCtx = new AudioContext();
+
+  let active_audio_example = 0;
+  const gain_node_array = [];
+
+  let num_of_oscillators = 16;
+
+  let audio_is_running = 0;
+  let last_played_audio_example = 0;
+
+  let max_freq = 1000.0;
+
+  const master_gain = audioCtx.createGain();
+    master_gain.connect(audioCtx.destination);
+
+  let klaster_1a_frequencies = [];
+      klaster_1a_frequencies[0] = max_freq * 17 / 31;
+      klaster_1a_frequencies[1] = max_freq * 17 / 29;
+      klaster_1a_frequencies[2] = max_freq * 17 / 23;
+      klaster_1a_frequencies[3] = max_freq * 17 / 19;
+      klaster_1a_frequencies[4] = max_freq * 17 / 17;
+
+  let klaster_1b_frequencies = [];
+      klaster_1b_frequencies[0] = max_freq * 17 / 31;
+      klaster_1b_frequencies[1] = max_freq * 19 / 31;
+      klaster_1b_frequencies[2] = max_freq * 23 / 31;
+      klaster_1b_frequencies[3] = max_freq * 29 / 31;
+      klaster_1b_frequencies[4] = max_freq * 31 / 31;
+
+  let klaster_2a_frequencies = [];
+      klaster_2a_frequencies[0] = max_freq * 37 / 61;
+      klaster_2a_frequencies[1] = max_freq * 37 / 59;
+      klaster_2a_frequencies[2] = max_freq * 37 / 53;
+      klaster_2a_frequencies[3] = max_freq * 37 / 47;
+      klaster_2a_frequencies[4] = max_freq * 37 / 43;
+      klaster_2a_frequencies[5] = max_freq * 37 / 41;
+      klaster_2a_frequencies[6] = max_freq * 37 / 37;
+
+  let klaster_2b_frequencies = [];
+      klaster_2b_frequencies[0] = max_freq * 37 / 61;
+      klaster_2b_frequencies[1] = max_freq * 41 / 61;
+      klaster_2b_frequencies[2] = max_freq * 43 / 61;
+      klaster_2b_frequencies[3] = max_freq * 47 / 61;
+      klaster_2b_frequencies[4] = max_freq * 53 / 61;
+      klaster_2b_frequencies[5] = max_freq * 59 / 61;
+      klaster_2b_frequencies[6] = max_freq * 61 / 61;
+
+  let klaster_3a_frequencies = [];
+      klaster_3a_frequencies[0] = max_freq * 67 / 127;
+      klaster_3a_frequencies[1] = max_freq * 67 / 113;
+      klaster_3a_frequencies[2] = max_freq * 67 / 109;
+      klaster_3a_frequencies[3] = max_freq * 67 / 107;
+      klaster_3a_frequencies[4] = max_freq * 67 / 103;
+      klaster_3a_frequencies[5] = max_freq * 67 / 101;
+      klaster_3a_frequencies[6] = max_freq * 67 / 97;
+      klaster_3a_frequencies[7] = max_freq * 67 / 89;
+      klaster_3a_frequencies[8] = max_freq * 67 / 83;
+      klaster_3a_frequencies[9] = max_freq * 67 / 79;
+      klaster_3a_frequencies[10] = max_freq * 67 / 73;
+      klaster_3a_frequencies[11] = max_freq * 67 / 71;
+      klaster_3a_frequencies[12] = max_freq * 67 / 67;
+
+  let klaster_3b_frequencies = [];
+      klaster_3b_frequencies[0] = max_freq * 67 / 127;
+      klaster_3b_frequencies[1] = max_freq * 71 / 127;
+      klaster_3b_frequencies[2] = max_freq * 73 / 127;
+      klaster_3b_frequencies[3] = max_freq * 79 / 127;
+      klaster_3b_frequencies[4] = max_freq * 83 / 127;
+      klaster_3b_frequencies[5] = max_freq * 89 / 127;
+      klaster_3b_frequencies[6] = max_freq * 97 / 127;
+      klaster_3b_frequencies[7] = max_freq * 101 / 127;
+      klaster_3b_frequencies[8] = max_freq * 103 / 127;
+      klaster_3b_frequencies[9] = max_freq * 107 / 127;
+      klaster_3b_frequencies[10] = max_freq * 109 / 127;
+      klaster_3b_frequencies[11] = max_freq * 113 / 127;
+      klaster_3b_frequencies[12] = max_freq * 127 / 127;
+
+
+  function init_klaster(frequency_table, gain_node_num){
+    gain_node_array[gain_node_num] = audioCtx.createGain();
+    for (let i = 0; i < frequency_table.length; i++) {
+      const oscillator = audioCtx.createOscillator();
+      oscillator.type = "sine";
+      const gainnode = audioCtx.createGain();
+      gainnode.gain.setValueAtTime(1.0/Math.sqrt(frequency_table.length), audioCtx.currentTime);
+      oscillator.connect(gainnode);
+      gainnode.connect(gain_node_array[gain_node_num]);
+      gain_node_array[gain_node_num].connect(master_gain);
+      gain_node_array[gain_node_num].gain.setValueAtTime(0.0, audioCtx.currentTime);
+      oscillator.start();
+      oscillator.frequency.setValueAtTime(frequency_table[i], audioCtx.currentTime);
+    }
+  }
+  function init_oscillators(){
+    init_klaster(klaster_1a_frequencies, 1);
+    init_klaster(klaster_1b_frequencies, 2);
+    init_klaster(klaster_2a_frequencies, 3);
+    init_klaster(klaster_2b_frequencies, 4);
+    init_klaster(klaster_3a_frequencies, 5);
+    init_klaster(klaster_3b_frequencies, 6);
+  }
+
+  function play_radio(num_of_example_to_play){
+
+    let fade_in_duration = 0.1;
+    let fade_out_duration = 0.1;
+    if (audio_is_running == 0){
+      init_oscillators();
+      audio_is_running = 1
+    }
+    if (last_played_audio_example != 0) {
+      gain_node_array[last_played_audio_example].gain.setValueCurveAtTime([0.1, 0.0], audioCtx.currentTime, fade_out_duration);
+    }
+    if (num_of_example_to_play == last_played_audio_example){
+      last_played_audio_example = 0;
+    } else {
+      gain_node_array[num_of_example_to_play].gain.setValueCurveAtTime([0.0, 0.1], audioCtx.currentTime, fade_in_duration);
+      last_played_audio_example = num_of_example_to_play;
+    }
+
+  }
+  
+  function gui_play_button_example_1A_cb() {
+    play_radio(1);
+  }
+  function gui_play_button_example_1B_cb() {
+    play_radio(2);
+  }
+  function gui_play_button_example_2A_cb() {
+    play_radio(3);
+  }
+  function gui_play_button_example_2B_cb() {
+    play_radio(4);
+  }
+  function gui_play_button_example_3A_cb() {
+    play_radio(5);
+  }
+  function gui_play_button_example_3B_cb() {
+    play_radio(6);
+  }
+
+  var slider = document.getElementById("volume_slider");
+  master_gain.gain.setValueAtTime(slider.value/100.0, audioCtx.currentTime);
+  slider.oninput = function() {
+    master_gain.gain.cancelScheduledValues(0);
+    master_gain.gain.setValueCurveAtTime([master_gain.gain.value, slider.value/100.0], audioCtx.currentTime, 0.3);
+  }
+</script>
+

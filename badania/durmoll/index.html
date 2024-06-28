@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<!-- v2024_06_17 Jan Machalski-->
+<html lang="pl-PL">
+<head>
+	
+
+	<meta charset="utf-8">
+	<title>badanie</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="This site is under development" />
+</head>
+
+
+
+
+  <div class="language_selector">
+      <select id="langselector" onchange="loadlang()">
+        <option value="English">English</option>
+        <option value="polski">polski</option>
+      </select>
+  </div>
+
+<body>
+
+	<header>
+
+      <div class="english">
+        <h1 class="naglowek">This site is under development!</h1>
+      </div>
+      <div class="polski">
+        <h1 class="naglowek">Strona w budowie!</h1>
+      </div>
+
+
+	<h1><a href="../index.html">[ home ]</a></h1>
+	</header>
+	  <main>
+	    <section></section>
+	    <section></section>
+	    <section></section>
+      <br>
+
+      <br>
+          <div class="english">introduction to the experiment</div>
+          <div class="polski">wprowadzenie do eksperymentu</div>
+
+          <form action="https://api.web3forms.com/submit" method="post" id="npsform">
+            <input type="hidden" name="access_key" value="f21cdf7e-cbb0-48cb-a08b-d5a81c866c00">
+            <input type="hidden" name="subject" value="Badanie dur/moll" />
+            <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+            <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+
+
+            <div class="sekcjaKwestionariusza">
+                <h2>
+                    <div class="english">1) Listen to the following examples:</div>
+                    <div class="polski">1) Posłuchaj następujących przykładów:</div>
+                </h2>
+                <div>
+                    <button class="audiobutton" type="button" onclick="play_przyklad_1A()">
+                          <div class="english">𝄞 example 1A</div>
+                          <div class="polski">𝄞 przykład 1A</div>
+                  </button>
+                    <button class="audiobutton" type="button" onclick="play_przyklad_1B()">
+                          <div class="english">𝄞 example 1B</div>
+                          <div class="polski">𝄞 przykład 1B </div>
+                    </button>
+                </div>
+                  <br>
+                  <div class="slidecontainer">
+                   <label for="volume" style="position: absolute; margin-top:0rem; margin-bottom:5px;">
+                      <div class="english">Listen to the examples again and adjust the volume if necessary:</div>
+                      <div class="polski">Jeżeli to potrzebne, dostosuj głośnośność i posłuchaj przykładów ponownie:</div>
+                   </label><br>
+                   <input type="range" min="0" max="100" value="50" class="slider" id="volume_slider" name="volume">
+                  </div>
+                <br>
+                <h2>
+                  <div class="english">Which example sounds more like a <u>minor</u> chord?</div>
+                  <div class="polski">Który przykład brzmi bardziej jak akord <u>molowy</u>?</div>
+                </h2>
+
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz1" name="badanie_durmoll_przyklad_1" value="-2"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz1" class="radiolabel">
+                          <div class="english">Example 1A is a minor chord and example 1B is not.</div>
+                          <div class="polski">Przykład 1A to akord molowy, a przykład 1B nie.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz2" name="badanie_durmoll_przyklad_1" value="-1"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz2" class="radiolabel">
+                          <div class="english">Example 1A sounds more like a minor chord than example 1B.</div>
+                          <div class="polski">Przykład 1A brzmi bardziej molowo od przykładu 1B.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz3" name="badanie_durmoll_przyklad_1" value="0"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz3" class="radiolabel">
+                          <div class="english">Both examples sound equally minor.</div>
+                          <div class="polski">Obydwa przykłady brzmią jednakowo molowo.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz4" name="badanie_durmoll_przyklad_1" value="1"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz4" class="radiolabel">
+                          <div class="english">Example 1B sounds more like a minor chord than example 1A.</div>
+                          <div class="polski">Przykład 1B brzmi bardziej molowo od przykładu 1A.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz5" name="badanie_durmoll_przyklad_1" value="2"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz5" class="radiolabel">
+                          <div class="english">Example 1B is a minor chord and example 1A is not.</div>
+                          <div class="polski">Przykład 1B to akord molowy, a przykład 1A nie.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+
+
+
+
+
+            <div class="sekcjaKwestionariusza">
+                <h2>
+                    <div class="english">2) Listen to the following examples:</div>
+                    <div class="polski">2) Posłuchaj następujących przykładów:</div>
+                </h2>
+                <div>
+                    <button class="audiobutton" type="button" onclick="play_przyklad_2A()">
+                          <div class="english">𝄞 example 2A</div>
+                          <div class="polski">𝄞 przykład 2A</div>
+                  </button>
+                    <button class="audiobutton" type="button" onclick="play_przyklad_2B()">
+                          <div class="english">𝄞 example 2B</div>
+                          <div class="polski">𝄞 przykład 2B </div>
+                    </button>
+                </div>
+                <br>
+                <h2>
+                  <div class="english">Which example sounds more like a <u>major</u> chord?</div>
+                  <div class="polski">Który przykład brzmi bardziej jak akord <u>durowy</u>?</div>
+                </h2>
+
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz1" name="badanie_durmoll_przyklad_1" value="-2"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz1" class="radiolabel">
+                          <div class="english">Example 2A is a major chord and example 2B is not.</div>
+                          <div class="polski">Przykład 2A to akord durowy, a przykład 2B nie.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz2" name="badanie_durmoll_przyklad_1" value="-1"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz2" class="radiolabel">
+                          <div class="english">Example 2A sounds more like a major chord than example 2B.</div>
+                          <div class="polski">Przykład 2A brzmi bardziej durowo od przykładu 2B.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz3" name="badanie_durmoll_przyklad_1" value="0"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz3" class="radiolabel">
+                          <div class="english">Both examples sound equally major.</div>
+                          <div class="polski">Obydwa przykłady brzmią jednakowo durowo.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz4" name="badanie_durmoll_przyklad_1" value="1"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz4" class="radiolabel">
+                          <div class="english">Example 2B sounds more like a major chord than example 2A.</div>
+                          <div class="polski">Przykład 2B brzmi bardziej durowo od przykładu 2A.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz5" name="badanie_durmoll_przyklad_1" value="2"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz5" class="radiolabel">
+                          <div class="english">Example 2B is a major chord and example 2A is not.</div>
+                          <div class="polski">Przykład 2B to akord durowy, a przykład 2A nie.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+
+            <div class="sekcjaKwestionariusza">
+                <h2>
+                    <div class="english">3) Listen to the following examples:</div>
+                    <div class="polski">3) Posłuchaj następujących przykładów:</div>
+                </h2>
+                <div>
+                    <button class="audiobutton" type="button" onclick="play_przyklad_3A()">
+                          <div class="english">𝄞 example 3A</div>
+                          <div class="polski">𝄞 przykład 3A</div>
+                  </button>
+                    <button class="audiobutton" type="button" onclick="play_przyklad_3B()">
+                          <div class="english">𝄞 example 3B</div>
+                          <div class="polski">𝄞 przykład 3B </div>
+                    </button>
+                </div>
+                <br>
+                <h2>
+                  <div class="english">Which example sounds more like a <u>major</u> chord?</div>
+                  <div class="polski">Który przykład brzmi bardziej jak akord <u>durowy</u>?</div>
+                </h2>
+
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz1" name="badanie_durmoll_przyklad_1" value="-2"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz1" class="radiolabel">
+                          <div class="english">Example 3A is a major chord and example 3B is not.</div>
+                          <div class="polski">Przykład 3A to akord durowy, a przykład 3B nie.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz2" name="badanie_durmoll_przyklad_1" value="-1"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz2" class="radiolabel">
+                          <div class="english">Example 3A sounds more like a major chord than example 3B.</div>
+                          <div class="polski">Przykład 3A brzmi bardziej durowo od przykładu 3B.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz3" name="badanie_durmoll_przyklad_1" value="0"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz3" class="radiolabel">
+                          <div class="english">Both examples sound equally major.</div>
+                          <div class="polski">Obydwa przykłady brzmią jednakowo durowo.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz4" name="badanie_durmoll_przyklad_1" value="1"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz4" class="radiolabel">
+                          <div class="english">Example 3B sounds more like a major chord than example 3A.</div>
+                          <div class="polski">Przykład 3B brzmi bardziej durowo od przykładu 3A.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div>
+                    <fieldset>
+                    <input type="radio" id="badanie_durmoll_zadanie1_odpowiedz5" name="badanie_durmoll_przyklad_1" value="2"/>
+                      <label for="badanie_durmoll_zadanie1_odpowiedz5" class="radiolabel">
+                          <div class="english">Example 3B is a major chord and example 3A is not.</div>
+                          <div class="polski">Przykład 3B to akord durowy, a przykład 3A nie.</div>
+                      </label>
+                    </fieldset>
+                  </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+
+
+
+            
+
+
+            <div class="sekcjaKwestionariusza">
+              <h2> Can you tell us a bit more about your score?</h2>
+              <textarea name="comments" rows="3" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
+            </div>
+
+            <div class="sekcjaKwestionariusza">
+                <legend></legend>
+                <fieldset>
+                <input type="checkbox" name="zgodynarodoetc" id=""  required>
+                <label for="zgodynarodoetc">accept</label><br>
+                </fieldset>
+
+                <br>
+
+                <div class="mb-3" style="margin-top:10px">
+                   <button type="submit" class="btn btn-danielle">Submit</button>
+                </div>
+
+              <div id="form-result"></div>
+
+            </div>
+          </form>
+
+
+
+	  </main>
+	  <footer>
+	  J.F.M.
+	  </footer>
+</body>
+
+
+<script>
+  function loadlang(){
+    if (document.getElementById("langselector").value == "polski"){
+        document.querySelectorAll(".english").forEach(elem => elem.style.display = 'none');
+        document.querySelectorAll(".polski").forEach(elem => elem.style.display = 'block');
+    } else {
+        document.querySelectorAll(".english").forEach(elem => elem.style.display = 'block');
+        document.querySelectorAll(".polski").forEach(elem => elem.style.display = 'none');
+      }
+    }
+    loadlang();
+</script>
+
+
+<script>
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  const audioCtx = new AudioContext();
+
+  const master_gain = audioCtx.createGain();
+    master_gain.connect(audioCtx.destination);
+
+  let highest_pitch_hz = 1000.0;
+
+  function play_single_tone(frequency){
+    const oscillator = audioCtx.createOscillator();
+    var gainNode = audioCtx.createGain();
+    oscillator.connect(gainNode);
+    gainNode.connect(master_gain);
+    gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+    oscillator.type = "sine";
+    oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime);
+    oscillator.start();
+    gainNode.gain.setValueCurveAtTime([0.0, 0.5], 0.03 + audioCtx.currentTime, 0.08);
+    gainNode.gain.setValueCurveAtTime([0.5, 0.0], 0.03 + audioCtx.currentTime + 0.1, 0.7);
+  }
+  function play_triad(freq1,freq2,freq3){
+    play_single_tone(freq1);
+    play_single_tone(freq2);
+    play_single_tone(freq3);
+  }
+
+  function play_12edo_major_triad(){
+    // 12EDO major triad
+    let freq1 = highest_pitch_hz * Math.pow(1/2,7/12);
+    let freq2 = highest_pitch_hz * Math.pow(1/2,3/12);
+    let freq3 = highest_pitch_hz * Math.pow(1/2,0/12);;
+    play_triad(freq1,freq2,freq3);
+  }
+
+  function play_12edo_minor_triad(){
+    // 12EDO minor triad
+    let freq1 = highest_pitch_hz * Math.pow(1/2,7/12);
+    let freq2 = highest_pitch_hz * Math.pow(1/2,4/12);
+    let freq3 = highest_pitch_hz * Math.pow(1/2,0/12);;
+    play_triad(freq1,freq2,freq3);
+  }
+
+  function play_ji_minor_triad(){
+    // JI utonal triad 1/(2;3;5;)
+    let freq1 = highest_pitch_hz * 2/5;
+    let freq2 = highest_pitch_hz * 2/3;
+    let freq3 = highest_pitch_hz * 2/2;
+    play_triad(freq1,freq2,freq3);
+  }
+  function play_ji_major_triad(){
+    // JI otonal 2:3:5
+    let freq1 = highest_pitch_hz * 2/5;
+    let freq2 = highest_pitch_hz * 3/5;
+    let freq3 = highest_pitch_hz * 5/5;
+    play_triad(freq1,freq2,freq3);
+  }
+
+  function play_ji_otonal_septimal_triad(){
+    // JI otonal 6:7:9
+    let freq1 = highest_pitch_hz * 6/9;
+    let freq2 = highest_pitch_hz * 7/9;
+    let freq3 = highest_pitch_hz * 9/9;
+    play_triad(freq1,freq2,freq3);
+  }
+
+  function play_ji_utonal_septimal_triad(){
+    // JI utonal 1/(6;7;9;)
+    let freq1 = highest_pitch_hz * 6/9;
+    let freq2 = highest_pitch_hz * 6/7;
+    let freq3 = highest_pitch_hz * 6/6;
+    play_triad(freq1,freq2,freq3);
+  }
+
+  function play_neutral_triad(){
+    // JI utonal 1/(6;7;9;)
+    let freq1 = highest_pitch_hz * Math.pow(1/2,7/12);
+    let freq2 = highest_pitch_hz * Math.pow(1/2,5/24);
+    let freq3 = highest_pitch_hz * Math.pow(1/2,0/12);
+    play_triad(freq1,freq2,freq3);
+  }
+
+  function play_przyklad_1A(){
+    play_12edo_major_triad();
+  }
+  function play_przyklad_1B(){
+    play_12edo_minor_triad();
+  }
+  function play_przyklad_2A(){
+    play_ji_major_triad();
+  }
+  function play_przyklad_2B(){
+    play_ji_minor_triad();
+  }
+  function play_przyklad_3A(){
+    play_ji_utonal_septimal_triad();
+  }
+  function play_przyklad_3B(){
+    play_ji_otonal_septimal_triad();
+    //play_12edo_major_triad();
+  }
+
+
+
+
+
+  var slider = document.getElementById("volume_slider");
+  master_gain.gain.setValueAtTime(slider.value/100.0, audioCtx.currentTime);
+  slider.oninput = function() {
+    master_gain.gain.cancelScheduledValues(0);
+    master_gain.gain.setValueCurveAtTime([master_gain.gain.value, slider.value/100.0], audioCtx.currentTime, 0.3);
+  }
+</script>
+
+<script>
+  window.addEventListener('beforeunload', function (e) {
+  // Cancel the event
+  e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
+  // Chrome requires returnValue to be set
+  e.returnValue = '';
+});
+</script>
+
+<style>
+  * {
+    font-family: 'Courier New', monospace;
+    box-sizing: border-box;
+  }
+
+  body, a:link, a:visited {
+    color: linen;
+  }
+
+  body {
+    font-size: 16px:;
+    /* background-color: hsla(211, 40%, 15%, 1.0);  MidnightBlue; */
+    background-color: #2C3539; /* MidnightBlue; */
+    line-height: 2;
+    text-align: justify;
+    margin-top: 5%;
+    margin-left: 8%;
+    margin-right: 16%;
+    margin-bottom: 240px;
+  }
+
+    .column {
+      width: 100%;
+    }
+
+  @media screen and (min-width:600px) {
+    .column{
+        display: flex;
+        width: 48%;
+      /* padding:1rem; */
+      }
+    .row {
+       display: flex;
+    }
+  }
+
+
+  .audiobutton {
+    background-color: #009999;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    border-radius: 3px;
+    font-family: inherit;
+    margin: 2px 2px 4px 4px;
+    cursor: pointer;
+  }
+  .audiobutton:hover {
+      color: #000000;
+      background-color: #CCFFFF;
+    }
+  
+  
+  
+
+  a:hover, .klikalne:hover {
+      color: #FFFEFA;
+    }
+
+    body {
+      animation: fadein 0.3s;
+          -moz-animation: fadein 0.3s; /* Firefox */
+          -webkit-animation: fadein 0.3s; /* Safari and Chrome */
+          -o-animation: fadein 0.3s; /* Opera */
+    }
+
+    @keyframes fadein {
+          from {
+              opacity:0;
+          }
+          to {
+              opacity:1;
+          }
+        }
+        @-moz-keyframes fadein { /* Firefox */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-webkit-keyframes fadein { /* Safari and Chrome */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-o-keyframes fadein { /* Opera */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+  h1, body, p, code, footer {
+    font-family: 'Courier New', monospace;
+    font-weight: normal;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 0%; 
+    font-weight: normal;
+  }
+
+  h2 {
+    text-align: left;
+    margin-top: 0px;
+    margin-left: 0%; 
+    font-weight: normal;
+  }
+
+  .naglowek {
+    text-align: center;
+    margin-top: 61px;
+    margin-left: 0%; 
+    font-weight: normal;
+  }
+
+  .language_selector {
+      /* float: right; */
+      text-align: right;
+      position: static;
+      margin-top: 0%;
+
+      margin-right: 0px;
+  }
+
+  p {
+  }
+
+  footer {
+    text-align: right;
+    font-size: 24px;
+    margin-right: 0px;
+  }
+  
+  code {
+    font-size: 16px;
+    margin-top: 32px;
+    margin-left: 42px;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    font-size: 18px;
+  }
+
+  nav {
+    text-align: center;
+    list-style-type: none;
+    font-size: 24px;
+  }
+  
+  a {
+    text-decoration: none;
+    }
+
+    
+
+  table {
+    border:solid SlateGrey 1px;
+      border-radius: 8px;
+      width: 100%;
+    }
+  th, td {
+    padding: 24px;
+    text-align: left;
+    }
+
+  #prawydolnyrog {
+      position: fixed;
+      right: 48px;
+      bottom: 12px;
+      text-align: right;
+      font-size: 24px;
+    }
+
+  form {
+    /* max-width: 500px; */
+    margin: 150px auto;
+  }
+
+  
+  fieldset {
+    border: 0;
+  }
+  
+
+  input,
+  textarea{
+    width: 100%;
+  }
+
+
+
+  input[type="radio"]{
+      width: auto;
+      display: block;
+      position: absolute;
+      padding-left: 0px;
+      vertical-align: middle;
+      margin-top: 8px;
+      cursor: pointer;
+  }
+  .radiolabel {
+      display: block;
+      position: relative;
+      padding-left: 36px;
+      cursor: pointer;
+  }
+  input[type="radio"]:checked+label{
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;
+  } 
+
+  input[type="checkbox"]{
+      width: auto;
+      display: inline;
+      cursor: pointer;
+  }
+
+  .sekcjaKwestionariusza {
+    border-left-style: dotted;
+    border-color: linen;
+    padding-left:1rem;
+  }
+
+  legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+  }
+
+</style>
