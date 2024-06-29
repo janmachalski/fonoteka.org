@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- v2024_06_17 Jan Machalski-->
+<!-- v2024_06_29 Jan Machalski-->
 <html lang="pl-PL">
 <head>
 	
 
 	<meta charset="utf-8">
-	<title>test_1</title>
+	<title>fonoteka.org experiment #1</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="This site is under development" />
 </head>
@@ -192,8 +192,8 @@
             <br>
             <div class="sekcjaKwestionariusza">
               <h2 style="text-align: justify">
-                    <div class="english">Please, describe the lowest note that you hear in terms of its pitch, timbre, dynamics, etc.<br>Listen to the example multiple times if necessary.<br>You are allowed to use a musical instrument as a pitch reference.</div>
-                    <div class="polski">Proszę, opisz najniższy dźwięk, który słyszysz, odnosząc się do jego barwy, wysokości, lokalizacji itp.<br>W razie potrzeby możesz posłuchać przykładu wielokrotnie oraz skorzystać z instrumentu muzycznego jako referencji wysokości dźwięku.</div>
+                    <div class="english">Please, describe the lowest note that you hear in terms of its pitch, timbre, dynamics, etc.<br>You can play the example multiple times if necessary. If you are listening through speakers, try moving your head. Try listening to the example at the highest comfortable loudness level. You are allowed to use a musical instrument as a pitch reference.</div>
+                    <div class="polski">Proszę, opisz najniższy dźwięk, który słyszysz, odnosząc się do jego barwy, wysokości, lokalizacji itp.<br>W razie potrzeby możesz posłuchać przykładu wielokrotnie. Jeżeli słuchasz przez głośniki, spróbuj poruszać swoją głową. Spróbuj posłuchać przykładu na największym komfortowym poziomie głośności. Możesz skorzystać z instrumentu muzycznego jako referencji wysokości dźwięku.</div>
               </h2>
               <textarea required name="opis_najnizszego_dzwieku" rows="16" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
             </div>
@@ -208,7 +208,7 @@
                   <div class="english">Briefly describe your listening conditions (headphone model, etc.):</div>
                   <div class="polski">Opisz krótko warunki odsłuchowe (model słuchawek itp.): </div>
               </h2>
-              <textarea required name="warunki_odsluchowe" rows="3" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
+              <textarea required name="warunki_odsluchowe" rows="6" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
             </div>
             <br>
             <br>
@@ -218,7 +218,7 @@
                   <div class="english">Additional notes:</div>
                   <div class="polski">Dodatkowe uwagi:</div>
               </h2>
-              <textarea name="dodatkowe_uwagi" rows="3" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
+              <textarea name="dodatkowe_uwagi" rows="6" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
             </div>
             <br>
             <br>
@@ -519,9 +519,16 @@
 
   input,
   textarea{
+    font-family: inherit;
     width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    padding: 8px 8px;
+    box-sizing: border-box;
+    resize: none;
   }
-
 
 
   input[type="radio"]{
