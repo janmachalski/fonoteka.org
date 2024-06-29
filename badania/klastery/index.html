@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- v2024_06_17 Jan Machalski-->
+<!-- v2024_06_29 Jan Machalski-->
 <html lang="pl-PL">
 <head>
 	
 
 	<meta charset="utf-8">
-	<title>test_2</title>
+	<title>fonoteka.org experiment #2</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="This site is under development" />
 </head>
@@ -226,7 +226,7 @@
                   <div class="english">Briefly describe your listening conditions (headphone model, etc.):</div>
                   <div class="polski">Opisz krótko warunki odsłuchowe (model słuchawek itp.): </div>
               </h2>
-              <textarea required name="warunki_odsluchowe" rows="3" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
+              <textarea required name="warunki_odsluchowe" rows="6" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
             </div>
             <br>
             <div class="sekcjaKwestionariusza">
@@ -234,7 +234,7 @@
                   <div class="english">Additional notes:</div>
                   <div class="polski">Dodatkowe uwagi:</div>
               </h2>
-              <textarea name="dodatkowe_uwagi" rows="3" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
+              <textarea name="dodatkowe_uwagi" rows="6" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
             </div>
             <br>
             <br>
@@ -534,7 +534,15 @@
 
   input,
   textarea{
+    font-family: inherit;
     width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    padding: 8px 8px;
+    box-sizing: border-box;
+    resize: none;
   }
 
 
@@ -712,6 +720,18 @@
     init_klaster(klaster_3b_frequencies, 6);
   }
 
+
+  function update_audiobutton_colours(){
+    for (let i = 1; i <= 6; i++) {
+        document.getElementById(900000+i).style.color = "#ffffff";
+        document.getElementById(900000+i).style.backgroundColor = "#009999";
+    }
+    if (last_played_audio_example != 0){
+        document.getElementById(900000+last_played_audio_example).style.color = "#000000";
+        document.getElementById(900000+last_played_audio_example).style.backgroundColor = "#CCFFFF";
+    }
+  }
+
   function play_radio(num_of_example_to_play){
 
     let fade_in_duration = 0.1;
@@ -729,7 +749,7 @@
       gain_node_array[num_of_example_to_play].gain.setValueCurveAtTime([0.0, 0.1], audioCtx.currentTime, fade_in_duration);
       last_played_audio_example = num_of_example_to_play;
     }
-
+    update_audiobutton_colours();
   }
   
   function gui_play_button_example_1A_cb() {
