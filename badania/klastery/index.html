@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v2024_06_29 Jan Machalski-->
+<!-- v2024_07_19 Jan Machalski-->
 <html lang="pl-PL">
 <head>
 	
@@ -46,30 +46,18 @@
             <input type="checkbox" name="botcheck" id="" style="display: none;" />
 
 
-           <div class="sekcjaKwestionariusza">
+            <div class="sekcjaKwestionariusza">
                 <h2>
-                    <div class="english">Are you a musician or a music student?</div>
-                    <div class="polski">Czy jesteś muzykiem lub uczniem szkoły muzycznej?</div>
+                    <div class="english">Are you a musician or a music student? If so, what is your specialization?</div>
+                    <div class="polski">Czy jesteś muzykiem lub uczniem szkoły muzycznej? Jeżeli tak, jaka jest Twoja specjalizacja?</div>
                 </h2>
-                  <div>
-                    <fieldset>
-                    <input required type="radio" id="badanie_czyjestesmuzykiem_odpowiedz_tak" name="czy_jestes_muzykiem" value="Tak"/>
-                      <label for="badanie_czyjestesmuzykiem_odpowiedz_tak" class="radiolabel">
-                          <div class="english">Yes</div>
-                          <div class="polski">Tak</div>
-                      </label>
-                    </fieldset>
-                  </div>
-                  <div>
-                    <fieldset>
-                    <input type="radio" id="badanie_czyjestesmuzykiem_odpowiedz_nie" name="czy_jestes_muzykiem" value="Nie"/>
-                      <label for="badanie_czyjestesmuzykiem_odpowiedz_nie" class="radiolabel">
-                          <div class="english">No</div>
-                          <div class="polski">Nie</div>
-                      </label>
-                    </fieldset>
-                  </div>
+              <textarea required name="czy_jestes_muzykiem" rows="4" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
             </div>
+
+            <br>
+
+
+
             <br>
             <br>
 
@@ -211,8 +199,8 @@
             <br>
             <div class="sekcjaKwestionariusza">
               <h2 style="text-align: justify">
-                    <div class="english">Your task is to name as many features/categories/associations as possible that, for you, distinguish these audio examples from each other. These may include perceived qualities of sound (e.g. roughness), as well as non-musical associations, short descriptions, or emoticons. Listen to the examples again if necessary.<br>Post your answers in the area below:</div>
-                    <div class="polski">  Twoim zadaniem będzie nazwanie jak największej liczby cech/kategorii/skojarzeń, które w Twoim odczuciu odróżniały te przykłady dźwiękowe od siebie.<br> Mogą to być zarówno cechy jakościowe dźwięku (np. szorstkość), jak i skojarzenia pozamuzyczne, krótkie opisy, czy emotikony. W razie potrzeby posłuchaj przykładów ponownie.<br>Swoje odpowiedzi zamieść w obszarze poniżej:</div>
+                    <div class="english">Your task is to name as many features/categories/associations as possible that, for you, distinguish these audio examples from each other. These may include perceived qualities of sound (e.g. roughness), as well as non-musical associations, short descriptions, or emoticons. You may refer to any of the above examples. Listen to the examples again if necessary.<br>Post your answers in the area below:</div>
+                    <div class="polski">  Twoim zadaniem będzie nazwanie jak największej liczby cech/kategorii/skojarzeń, które w Twoim odczuciu odróżniały te przykłady dźwiękowe od siebie. Określenia te mogą dotyczyć dowolnych z powyższych przykładów.<br> Mogą to być zarówno cechy jakościowe dźwięku (np. szorstkość), jak i skojarzenia pozamuzyczne, krótkie opisy, czy emotikony. W razie potrzeby posłuchaj przykładów ponownie.<br>Swoje odpowiedzi zamieść w obszarze poniżej:</div>
               </h2>
               <textarea required name="roznice_pomiedzy_przykladami" rows="16" class="w-full rounded-md border bg-white shadow border-gray-400 focus:border-indigo-500 "></textarea>
             </div>
