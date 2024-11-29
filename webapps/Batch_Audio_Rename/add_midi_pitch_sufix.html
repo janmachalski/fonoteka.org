@@ -35,13 +35,29 @@
         }
 
         h1 {
-            font-size: 2em;
-            text-align: center;
-            margin-top: 2em;
-            margin-bottom: 0.5em;
-            color: var(--amber-bright);
-            text-shadow: var(--glow-sm), var(--glow-md);
-            letter-spacing: 2px;
+          font-size: 2em;
+          text-align: center;
+          margin-top: 2em;
+          margin-bottom: 0.5em;
+          color: var(--amber-bright);
+          text-shadow: var(--glow-sm), var(--glow-md);
+        }
+
+        /* Dla wąskich ekranów */
+        @media (max-width: 768px) {
+          h1 {
+            padding: 0px;
+            font-size: 1.5em;
+            display: flex; /* Ustawiamy element jako flex */
+            justify-content: space-between; /* Równa odległość między literami */
+            letter-spacing: calc(100vw / 20 - 0.8em);  /* Obliczamy odległość między literami */
+          }
+        }
+        @media (max-width: 512px) {
+          h1 {
+            font-size: 1.5em;
+            letter-spacing: calc((100vw / 20) - 0.7em);  /* Obliczamy odległość między literami */
+          }
         }
 
         h2 {
@@ -165,10 +181,10 @@
     </style>
 </head>
 <body>
-    <h1>+ MIDI PITCH SUFIX +</h1>
+    <h1><span style="white-space: nowrap;">+ MIDI PITCH SUFIX +</span></h1>
     <h2>Batch Audio Rename Utility<br>with a Pitch Detection algorithm.</h2>
     <div id="dropZone">
-        <span style="white-space: nowrap;">drag & drop</span> <span style="white-space: nowrap;">audio samples</span> <span style="white-space: nowrap;">｡☯_☯｡</span>
+        drag & drop audio samples <span style="white-space: nowrap;">｡☯_☯｡</span>
     </div>
     <div id="controlPanel">
         <button id="saveAllBtn" disabled>Save All Files (づ｡◕‿‿◕｡)づ</button>
