@@ -1,0 +1,354 @@
+<!--
+    Batch Audio Rename Utility with a Pitch Detection Algorithm
+    (c) Jan Machalski 2024.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rename Audio Files by Pitch</title>
+    <style>
+        /* Amber colours reminiscent of retro monochrome displays */
+        :root {
+            --amber-bright: #ffb000;
+            --amber-mid: #ff9900;
+            --amber-dim: #cc7700;
+            --amber-dark: #663300;
+            --bg-color: #1a1a1a;
+            --glow-sm: 0 0 5px rgba(255, 176, 0, 0.1);
+            --glow-md: 0 0 15px rgba(255, 176, 0, 0.3);
+            --glow-lg: 0 0 30px rgba(255, 176, 0, 0.2);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--amber-bright);
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-shadow: var(--glow-sm);
+        }
+
+        h1 {
+            font-size: 2em;
+            text-align: center;
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+            color: var(--amber-bright);
+            text-shadow: var(--glow-sm), var(--glow-md);
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 1em;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--amber-bright);
+            text-shadow: var(--glow-sm), var(--glow-md);
+            letter-spacing: 2px;
+            line-height: 1.5;
+        }
+
+        #dropZone {
+            border: 3px dashed var(--amber-dim);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 0 20px rgba(255, 176, 0, 0.1);
+            cursor: pointer;
+        }
+
+        #dropZone:hover {
+            border-color: var(--amber-bright);
+            box-shadow: inset 0 0 30px rgba(255, 176, 0, 0.2),
+                        0 0 20px rgba(255, 176, 0, 0.3);
+            text-shadow: var(--glow-sm), var(--glow-md);
+        }
+
+        #dropZone.dragover {
+            border-color: var(--amber-bright);
+            box-shadow: inset 0 0 40px rgba(255, 176, 0, 0.3),
+                        0 0 30px rgba(255, 176, 0, 0.4);
+            text-shadow: var(--glow-sm), var(--glow-lg);
+            background-color: rgba(255, 176, 0, 0.1);
+        }
+
+        #fileList {
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .file-item {
+            background-color: rgba(255, 176, 0, 0.05);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid var(--amber-dark);
+            box-shadow: 0 0 10px rgba(255, 176, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .file-item:hover {
+            background-color: rgba(255, 176, 0, 0.1);
+            box-shadow: 0 0 15px rgba(255, 176, 0, 0.2);
+        }
+
+        .download-btn, #saveAllBtn {
+            background-color: var(--amber-dark);
+            color: var(--amber-bright);
+            border: 1px solid var(--amber-dim);
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            margin: 5px;
+            transition: all 0.3s ease;
+            text-shadow: var(--glow-sm);
+        }
+
+        .download-btn:hover, #saveAllBtn:hover {
+            background-color: rgba(255, 176, 0, 0.2);
+            border-color: var(--amber-bright);
+            box-shadow: 0 0 15px rgba(255, 176, 0, 0.3);
+        }
+
+        .download-btn:disabled, #saveAllBtn:disabled {
+            background-color: var(--bg-color);
+            border-color: var(--amber-dark);
+            color: var(--amber-dark);
+            cursor: not-allowed;
+            text-shadow: none;
+            box-shadow: none;
+        }
+
+        .error {
+            color: #ff4444;
+            text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+        }
+
+        #controlPanel {
+            margin: 20px 0;
+            display: none;
+        }
+
+        .status {
+            color: var(--amber-dim);
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        /* Add subtle pulsing animation to important elements */
+        @keyframes subtle-pulse {
+          0% { text-shadow: var(--glow-sm); }
+          25% { text-shadow: var(--glow-sm), var(--glow-md); }
+          75% { text-shadow: var(--glow-sm), var(--glow-md); }
+          100% { text-shadow: var(--glow-sm); }
+        }
+
+        h1, #dropZone:hover {
+          animation: subtle-pulse 12s infinite ease-in-out;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>+ MIDI PITCH SUFIX +</h1>
+    <h2>Batch Audio Rename Utility<br>with a Pitch Detection algorithm.</h2>
+    <div id="dropZone">
+        drag & drop audio samples ｡☯_☯｡
+    </div>
+    <div id="controlPanel">
+        <button id="saveAllBtn" disabled>Save All Files (づ｡◕‿‿◕｡)づ</button>
+    </div>
+    <div id="fileList"></div>
+    <!-- Example of expected output for a file:
+         Input: example_a440.wav
+         Output: example_a440_69.wav ( ~440.00 Hz ) 
+         Where _69 is the detected MIDI note number -->
+    <script>
+        const SUPPORTED_FORMATS = ['wav', 'mp3', 'aac', 'ogg', 'flac'];
+
+        function isSupportedFileType(fileName) {
+            const ext = fileName.split('.').pop().toLowerCase();
+            return SUPPORTED_FORMATS.includes(ext);
+        }
+
+        function convert_midi_pitch_to_spn(midiPitch) {
+            const notes = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'G#', 'A', 'Bb', 'B'];
+            const octave = Math.floor(midiPitch / 12) - 1;
+            const note = notes[midiPitch % 12];
+            return `${note}${octave}`;
+        }
+        
+        function freqToMidi(frequency) {
+            const LOG2 = Math.log(2);
+            return Math.round(12.0 * (Math.log(frequency / 440.0) / LOG2) + 69.0);
+        }
+
+        class AudioAnalyzer {
+            constructor() {
+                this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                this.setupDropZone();
+                this.setupSaveAllButton();
+                this.processedFiles = new Map();
+            }
+
+            setupSaveAllButton() {
+                const saveAllBtn = document.getElementById('saveAllBtn');
+                saveAllBtn.onclick = () => this.saveAllFiles();
+            }
+
+            setupDropZone() {
+                const dropZone = document.getElementById('dropZone');
+                const preventDefaults = e => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                };
+
+                ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                    dropZone.addEventListener(eventName, preventDefaults);
+                });
+
+                // Obsługa drag'n'drop
+                dropZone.addEventListener('dragenter', () => dropZone.classList.add('dragover'));
+                dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+                dropZone.addEventListener('drop', (e) => {
+                    dropZone.classList.remove('dragover');
+                    const files = [...e.dataTransfer.files].filter(file => isSupportedFileType(file.name));
+                    files.forEach(file => this.processFile(file));
+                    document.getElementById('controlPanel').style.display = files.length ? 'block' : 'none';
+                });
+
+                // Dodanie obsługi kliknięcia
+                dropZone.addEventListener('click', () => {
+                    const input = document.createElement('input');
+                    input.type = 'file';
+                    input.multiple = true;
+                    input.accept = SUPPORTED_FORMATS.map(format => `.${format}`).join(',');
+                    
+                    input.onchange = (e) => {
+                        const files = [...e.target.files].filter(file => isSupportedFileType(file.name));
+                        files.forEach(file => this.processFile(file));
+                        document.getElementById('controlPanel').style.display = files.length ? 'block' : 'none';
+                    };
+
+                    input.click();
+                });
+            }
+
+            async processFile(file) {
+                const fileId = Date.now() + Math.random();
+                const fileList = document.getElementById('fileList');
+
+                const fileElement = document.createElement('div');
+                fileElement.className = 'file-item';
+                fileElement.innerHTML = `
+                    <div>
+                        <div>${file.name}</div>
+                        <div class="status">( calculating... )</div>
+                    </div>
+                    <button class="download-btn" disabled>Download</button>
+                `;
+                fileList.appendChild(fileElement);
+
+                try {
+                    const arrayBuffer = await file.arrayBuffer();
+                    const audioBuffer = await this.audioContext.decodeAudioData(arrayBuffer);
+                    const frequency = await this.detectPitch(audioBuffer);
+
+                    if (frequency <= 0) throw new Error('Invalid frequency detected');
+
+                    const midiPitch = freqToMidi(frequency);
+                    if (midiPitch < 0 || midiPitch > 127) {
+                        throw new Error(`Detected MIDI pitch (${midiPitch}) is out of range (0-127).`);
+                    }
+                    
+                    // Generowanie nowej nazwy pliku z "_69"
+                    const baseFileName = file.name.split('.').slice(0, -1).join('.');
+                    const extension = file.name.split('.').pop();
+                    const newFileName = `${baseFileName}_${midiPitch}.${extension}`;
+
+                    // Wyświetlanie nazwy pliku z sufiksem i dodatkowymi danymi
+                    const spn = convert_midi_pitch_to_spn(midiPitch);
+                    console.log(`MIDI: ${midiPitch}, SPN: ${spn}, Frequency: ${frequency.toFixed(2)} Hz`);
+                    fileElement.querySelector('.status').innerHTML = `( ${spn} ~${frequency.toFixed(2)} Hz )`;
+
+                    fileElement.querySelector('div > div:first-child').innerHTML = `
+                        ${baseFileName}_${midiPitch}.${extension}
+                        <span class="additional-info">( ${spn} ~${frequency.toFixed(2)} Hz )</span>
+                    `;
+
+                    // Aktywacja przycisku pobierania
+                    const downloadBtn = fileElement.querySelector('.download-btn');
+                    downloadBtn.disabled = false;
+                    downloadBtn.onclick = () => this.downloadFile(file, newFileName);
+
+                    this.processedFiles.set(fileId, { file, newFileName });
+                    document.getElementById('saveAllBtn').disabled = false;
+
+                } catch (error) {
+                    fileElement.querySelector('.status').innerHTML = `
+                        <span class="error">Error: ${error.message}</span>
+                    `;
+                }
+            }
+
+
+            async detectPitch(audioBuffer) {
+                const data = audioBuffer.getChannelData(0);
+                const sampleRate = audioBuffer.sampleRate;
+                const bufferSize = Math.min(2048, data.length);
+                const correlation = new Float32Array(bufferSize);
+
+                for (let i = 0; i < bufferSize; i++) {
+                    for (let j = 0; j < bufferSize - i; j++) {
+                        correlation[i] += data[j] * data[j + i];
+                    }
+                }
+
+                let maxCorrelation = -1;
+                let maxIndex = -1;
+                for (let i = 1; i < correlation.length - 1; i++) {
+                    if (correlation[i] > maxCorrelation && correlation[i] > correlation[i-1] && correlation[i] > correlation[i+1]) {
+                        maxCorrelation = correlation[i];
+                        maxIndex = i;
+                    }
+                }
+                if (maxIndex === -1) throw new Error('No pitch detected');
+                return sampleRate / maxIndex;
+            }
+
+            downloadFile(file, newFileName) {
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(file);
+                link.download = newFileName;
+                link.click();
+            }
+
+            async saveAllFiles() {
+                for (const {file, newFileName} of this.processedFiles.values()) {
+                    this.downloadFile(file, newFileName);
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                }
+            }
+        }
+
+        new AudioAnalyzer();
+
+        
+    </script>
+</body>
+</html>
