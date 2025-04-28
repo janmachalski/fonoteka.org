@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="copyright" content="Jan Machalski 2025">
+    <title>[ bad apple on the inner ear ]</title>
+    <style>
+        body {
+            background-color: black;
+            color: #AFEEEE; /* Seledynowy (PaleTurquoise) */
+            font-family: monospace;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            background-color: #333;
+            color: #AFEEEE;
+            border: 1px solid #AFEEEE;
+            padding: 10px 15px;
+            margin: 10px;
+            cursor: pointer;
+            font-family: monospace;
+            min-width: 150px;
+            text-align: center;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        #drop_zone {
+            border: 2px dashed #AFEEEE;
+            padding: 40px;
+            margin-top: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #drop_zone.dragging {
+            border-style: solid;
+            background-color: #1a1a1a;
+        }
+
+         #status_area {
+            margin-top: 15px;
+            min-height: 20px;
+            font-size: 0.9em;
+            color: #cccccc;
+        }
+
+        #output_display {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #555;
+            background-color: #111;
+            width: 80%;
+            max-width: 500px;
+        }
+         #output_display h2 {
+             margin-top: 0;
+             color: #AFEEEE;
+         }
+
+        h1 {
+          font-size: 1.5rem;
+          font-weight: 300;
+          line-height: 1.2;
+          margin-bottom: 0.5em;
+          text-align: center;
+        }
+
+        h2 {
+          text-align: center;
+          font-size: 1rem;
+          font-weight: 300;
+          line-height: 1.2;
+          margin-bottom: 2em;
+        }
+
+    </style>
+    <script src="midi_utilities.js" defer></script>
+    <script src="mmath.js" defer></script>
+    <script src="main.js" defer></script>
+    <script src="frequency_visualizer.js" defer></script>
+    <script src="favicon.js"></script>
+</head>
+<body>
+
+    <h1>[ Bad Apple!! ]</h1>
+    <h2>combination tones version</h2>
+
+    <button id="audio_context_toggle">[ off ]</button>
+    <button id="playback_toggle" disabled>[ play ]</button>
+
+    <div id="status_area">Audio Context: OFF | File: None</div>
+
+    </body>
+</html>
